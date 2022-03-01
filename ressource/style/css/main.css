@@ -1,0 +1,522 @@
+/* GLOBAL CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{height:100%;}
+
+@font-face {
+    font-family: "Beaufort for LOL";
+    src: url("../../font/beaufort/Beaufort\ for\ LOL\ Bold.ttf");
+}
+
+@font-face {
+    font-family: "Spiegel";
+    src: url("../../font/spiegel/spiegel.ttf");
+}
+
+@keyframes fondu{
+    0%{background-image: url("../../image/screen/grid5x5.png");}
+    10%{background-image: url("../../image/screen/grid5x5line.png");}
+    20%{background-image: url("../../image/screen/grid5x5line.png");}
+    30%{background-image: url("../../image/screen/grid5x5line.png");}
+    40%{background-image: url("../../image/screen/grid5x5line.png");}
+    50%{background-image: url("../../image/screen/grid5x5line.png");}
+    60%{background-image: url("../../image/screen/grid5x5.png");}
+    70%{background-image: url("../../image/screen/grid5x5.png");}
+    80%{background-image: url("../../image/screen/grid5x5.png");}
+    90%{background-image: url("../../image/screen/grid5x5.png");}
+    100%{background-image: url("../../image/screen/grid5x5.png");}
+
+}
+
+
+@keyframes color {
+    0%   { background: #010e1a; }
+    20%  { background: #05101A; }
+    40%  { background: #0A1A28; }
+    60%  { background: #0A1A28; }
+    80%  { background: #05101A; }
+    100% { background: #010e1a; }
+}
+
+#img-border{
+    border: solid 2px #997338;
+}
+
+
+body{
+    animation: color 15s infinite linear;
+    color: #948f81;
+    font-size: 18px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,.2);
+}
+  
+/*    HEADER     */
+
+header {
+    border-bottom:2px solid rgba(51,51,51,.25);
+    background: #111111;
+    color: #f9f9f9;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 3;
+
+    min-height: 10vh;
+}
+
+
+header a{
+    font-family: "FF Mark W05",Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #f9f9f9;
+    text-decoration: none;
+    
+    display: flex;
+    align-items: center;
+    
+}
+
+header nav{
+    margin: auto;
+    padding: 2rem;
+    width: 90%;  
+}
+
+header nav ul{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+header li:hover{
+    border-bottom: 3px solid #00a0ba;
+    display: flex;
+    cursor: pointer;
+    background: #2A2A2A;
+    border-radius: 4px;
+}
+
+
+
+header nav ul li{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px; 
+    
+}
+
+header nav ul li a img{
+
+    width: 20px;
+    margin-right: 4px;
+}
+
+/* logo vectoriser en haut a gauche | vectorised logo top left */ 
+
+.BlogoH {
+    margin-right: auto;
+
+}
+
+.BlogoH a:hover{
+    box-shadow: none;
+}
+
+.BlogoH img{
+    width: 30px;
+}
+
+/* globe clicable en haut a droite pour changer la langue et le menu deroulant | clickable globe top right for change the language with a pixels scrolling menu*/
+
+.underGlobe {
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    display: flex;
+
+}
+
+.underGlobe img {
+    width: 20px;
+    }
+
+.underGlobe:hover{
+    display: flex;
+    cursor: pointer;
+    background: #2A2A2A;
+    border-radius: 4px;
+}
+
+/* menu deroulant | scrolling menu */
+
+.dropdown-child {
+    display: none;
+    background-color: #ffffff;
+    min-width: 100px;
+
+}
+
+
+.dropdown-child a {
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    box-shadow: none;
+}
+
+.underGlobe:focus .dropdown-child {
+    display: block;
+}
+
+.dropbtn {
+    position: absolute;
+    padding: 17.5px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    opacity: 0.0;    
+}
+
+.dropdown-content a{ 
+    box-shadow: none;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    top: 45px;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: #747474;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover, #red:hover{
+    color: black;
+}
+
+.show {
+    display:block;
+}
+
+#img-arrow{
+    position: absolute;
+    left: 70px;
+    top: -13px;
+}
+
+#red{
+    color: #c4202b;
+}
+
+/* main */
+
+main{
+    margin: auto;   
+    padding-top: 10vh;
+    text-align: center;
+}
+
+/* div centrale avec une image et du text | the central div with picture and text  */
+
+.titre-mid{
+    margin: 30px 0;
+}
+
+.div-img-text{
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 8px solid transparent;
+    border-image: linear-gradient(to right,#836323 0,#836323 51%,#836323 100%);
+    border-image-slice: 100%;
+    border-image-slice: 1;
+    line-height: 1.42857143;
+
+}
+
+.text-near-img{
+    position: relative;
+    margin-left: 7%;
+    min-height: 1px;
+    padding-right: 15px;
+    width: 41.66666667%;
+}
+
+.text-near-img  h3{
+    text-align: start;
+}
+
+.grid-swap{
+    margin-right: 7%;
+    width: 412px;
+    height: 426px;
+    animation: fondu 10s ease-in infinite both;
+}
+
+
+.img-near-text{
+    margin-left: 7%;
+}
+
+
+.text-near-img2{
+    text-align: end;
+    position: relative;
+    min-height: 1px;
+    width: 41.66666667%;
+    margin-right: 7%;
+}
+
+
+.middleText2{
+    text-align: end;
+}
+
+
+.middleText{
+    text-align: start;
+}
+
+.img-text{
+    float: right;
+    margin: 0px 10px 0px 15px;
+}
+
+/* couleur des svg | color of svg */
+
+svg{
+    fill: white;
+}
+
+/* le bas de page | the foot page */ 
+
+footer{
+    background-color: #111111;
+    border-top: 2px solid #343434;
+    min-height: 10vh;
+    
+}
+
+footer nav{
+    
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+footer nav ul{
+    display: flex;
+    column-gap: 20px;
+    flex: 1 ;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+}
+
+footer nav ul li{
+    background-color: #2A2A2A ;
+    height: 30px;
+    width: 30px;
+    padding: 7px 7px 7px 7px;
+    border-radius: 10px;
+}
+
+/* le bouton de telechargement | the download button */
+
+.buttonTElechaegement{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.btn-primary {
+    border: 3px solid rgba(192,252,253,.7);
+    border-radius: 0;
+    padding: 13px 35px 12px;
+    color: #f0e6d2;
+    font-size: 18px;
+    font-family: "Beaufort for LOL";
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    background: #1e2328;
+    background-image: transparent;
+    box-shadow: 0 0 0 0 transparent;
+    border-image: linear-gradient(to bottom,#08abac 0,#01698b 100%);
+    border-image-slice: 1;
+    transition: all ease .5s;
+    margin: 30px auto;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* la police d'écriture des différentes balises | font styles for balise */
+.tagline{
+    z-index: 100;
+    bottom: 4.5%;
+    text-align: center;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.tagline h3 {
+    margin-top: 0;
+    margin-bottom: .3em;
+    text-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+
+.tagline h2 {
+    margin-top: 0;
+    margin-bottom: .3em;
+    text-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+
+.btn-primary, h1, h2, h3, h4 {
+    font-family: "Beaufort for LOL",YuMincho,"Yu Mincho","MS Mincho","Hiragino Kaku Gothic ProN",serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #c8aa6e;
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #f0e6d2;
+    font-size: 40px;
+    text-transform: uppercase;
+    
+}
+
+h1, h2, h3, h4 {
+    font-family: "Beaufort for LOL",Helvetica,Sans-Serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
+/* autre | other */
+
+
+a:hover{
+    -webkit-box-shadow: 0px 0px 100px 0px #997338;
+    -moz-box-shadow: 0px 0px 100px 0px #997338;
+    box-shadow: 0px 0px 100px 0px #997338;
+    transition: .8s ease;
+    }
+
+
+
+p{
+    font-family: Spiegel;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 0 10px;
+}
+
+strong{
+    color: #f0e6d2;
+}
+
+
+#strong-win{
+    color:#09abae;
+}
+
+/* la page contact | the contact page */
+
+.div-contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 150px;
+    height: 100%;
+    min-height: 80vh ;
+}
+
+/* un tout petit peut pour les téléphones | for smartphone "a little bit" */
+
+@media (max-width: 1000px) {
+    .div-contact {
+      flex-direction: column;
+    }
+
+    .div-img-text {
+        flex-direction: column;
+      }
+    
+    .text-near-img{
+        margin: 0px 0px 0px 0px;
+    }
+
+    .grid-swap{
+        margin: 0px 0px 30px 0px;
+    }
+
+    .img-near-text{
+        margin: 30px 0px 0px 0px;
+    }
+
+    .div-img-text{
+        height:1010px;
+    }
+  
+    .d1{
+      margin: auto;
+    }
+}
+.img-contact{
+
+    border-radius: 500px;
+    border: solid 4px #997338;
+
+}
+
+.img-contact:hover{
+
+    border: solid 4px #09abae;
+}
+
+.div-contact a:hover{
+
+   box-shadow: none;
+}
+
+
+
+/* le magnifique compteur de téléchargement | counter of download  */
+
+#compteur{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
